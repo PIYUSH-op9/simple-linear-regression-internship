@@ -114,3 +114,36 @@ The model was evaluated on the unseen test set (89 samples).
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+## Task 2: Classification on Imbalanced Data
+
+### Objective
+Build a classification model and evaluate it properly on imbalanced data.
+
+### Dataset
+Breast Cancer Wisconsin dataset from Scikit-learn. The malignant class is treated as the positive class (label 1).
+
+### Work Completed
+- Loaded the dataset and examined class distribution.
+- Trained a Logistic Regression classifier using feature scaling and class weighting.
+- Evaluated the model using a confusion matrix, accuracy, precision, recall, and F1-score.
+- Compared classification thresholds of 0.5 and 0.3.
+- Explained why accuracy alone can be misleading when classes are imbalanced.
+
+### Results
+
+| Metric | Threshold 0.5 | Threshold 0.3 |
+|---|---:|---:|
+| Accuracy | 97.4% | 96.5% |
+| Precision | 97.6% | 95.2% |
+| Malignant Recall | 95.2% | 95.2% |
+| F1-score | 96.4% | 95.2% |
+
+### Conclusion
+In this comparison, the threshold of 0.5 achieved higher accuracy, precision, and F1-score, while malignant recall remained unchanged. This demonstrates why classification thresholds should be evaluated using multiple metrics rather than accuracy alone.
+
+### Tools Used
+Python, Google Colab, Pandas, NumPy, Matplotlib, Seaborn, and Scikit-learn.
+
+*Disclaimer: This project is for educational purposes only and is not intended for medical diagnosis.*
