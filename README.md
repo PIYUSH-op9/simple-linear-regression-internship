@@ -174,3 +174,30 @@ Python, Google Colab, Pandas, NumPy, and Scikit-learn.
 
 ### Conclusion
 The project demonstrates pipeline-based preprocessing, K-fold cross-validation, and separation of training and test data to prevent leakage.
+
+## Capstone: Model with Error Analysis
+
+**Objective:** Build a tuned regression model, compare it with a baseline, analyze prediction errors, and recommend whether it is suitable for use.
+
+**Dataset:** California Housing dataset
+
+**Models:**
+- Baseline: Linear Regression
+- Tuned model: HistGradientBoostingRegressor with RandomizedSearchCV
+
+**Test-set results:**
+
+| Metric | Baseline | Tuned Model |
+|---|---:|---:|
+| MAE | 0.5332 | 0.2999 |
+| RMSE | 0.7456 | 0.4518 |
+| R² | 0.5758 | 0.8442 |
+
+**Key findings:**
+- The tuned model reduced test RMSE by approximately 39.40%.
+- Errors increased for higher-priced houses.
+- The dataset's target-value cap limits predictions for the most expensive properties.
+
+**Verdict:** Promising for educational use and further testing, but not suitable as the sole basis for real-world property valuations.
+
+**Notebook:** `Capstone_Tuned_Model_Error_Analysis.ipynb`
