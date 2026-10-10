@@ -147,3 +147,30 @@ In this comparison, the threshold of 0.5 achieved higher accuracy, precision, an
 Python, Google Colab, Pandas, NumPy, Matplotlib, Seaborn, and Scikit-learn.
 
 *Disclaimer: This project is for educational purposes only and is not intended for medical diagnosis.*
+
+## Task 3: Pipelines and Cross-Validation
+
+### Objective
+Build a leak-free machine-learning pipeline and validate it using K-fold cross-validation.
+
+### Work Completed
+- Split the data into training and test sets before model evaluation.
+- Used a `ColumnTransformer` to handle numerical and categorical features.
+- Applied median imputation and standard scaling to numerical features.
+- Applied most-frequent imputation and one-hot encoding to categorical features.
+- Combined preprocessing and Linear Regression in a single scikit-learn Pipeline.
+- Performed 5-fold cross-validation on training data only.
+- Evaluated the final pipeline on a separate test set.
+
+### Results
+- Mean CV R²: 0.7681
+- CV R² standard deviation: 0.0836
+- Test MAE: $18,359.52
+- Test RMSE: $29,447.16
+- Test R²: 0.8869
+
+### Tools Used
+Python, Google Colab, Pandas, NumPy, and Scikit-learn.
+
+### Conclusion
+The project demonstrates pipeline-based preprocessing, K-fold cross-validation, and separation of training and test data to prevent leakage.
